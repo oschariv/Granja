@@ -3,43 +3,23 @@
  * Write a description of class Cerdo here.
  * 
  * @author Oscar Charro Rivera (oschariv)
- * @version 1.0
+ * @version 1.0 (Revision 04/05/2017)
  */
-public class Cerdo extends Animal implements Vacunable
+public class Cerdo extends Mamifero implements Vacunable
 {
-    // instance variables - replace the example below with your own
-    private int peso;
     private static final int PESO_INICIAL = 15;
-    private int vida;
-    private static final int VIDA_INICIAL = 100;
+    private static final String SONIDO = "Ñoik, ñoik";  
+    private static final int PUNTOS_DE_VIDA_GANADOS_POR_VACUNACION = 20; 
 
     /**
      * Constructor for objects of class Cerdo
      */
     public Cerdo()
     {
-        peso = PESO_INICIAL;
-        vida = VIDA_INICIAL;
+        super(PESO_INICIAL, SONIDO);
     }
 
-    public void comer(){
-        peso += 2;
-        vida -= 10;
-    }
-    
-    public void emitirSonidoCaracteristico(){
-        System.out.println("Oink Oink");
-    }
-    
-    public int getPeso(){
-        return peso;
-    }
-    
-    public int getPuntosDeVida(){
-        return vida;
-    }
-    
     public void vacunar(){
-        vida += 20;
+        variarPuntosDeVida(PUNTOS_DE_VIDA_GANADOS_POR_VACUNACION);
     }
 }

@@ -3,43 +3,23 @@
  * Write a description of class Pollo here.
  * 
  * @author Oscar Charro Rivera (oschariv)
- * @version 1.0
+ * @version 1.0 (Revision 04/05/2017)
  */
-public class Pollo extends Animal implements Vacunable
+public class Pollo extends Ave implements Vacunable
 {
-    // instance variables - replace the example below with your own
-    private int peso;
-    private static final int PESO_INICIAL = 2;
-    private int vida;
-    private static final int VIDA_INICIAL = 100;
+    private static final int PESO_INICIAL = 1;
+    private static final int PUNTOS_DE_VIDA_GANADOS_POR_VACUNACION = 10;
+    private static final String SONIDO = "Pio Pio";
 
     /**
      * Constructor for objects of class Pollo
      */
     public Pollo()
     {
-        peso = PESO_INICIAL;
-        vida = VIDA_INICIAL;
-    }
-
-    public void comer(){
-        peso += 1;
-        vida -= 10;
-    }
-    
-    public void emitirSonidoCaracteristico(){
-        System.out.println("Pio Pio");
-    }
-    
-    public int getPeso(){
-        return peso;
-    }
-    
-    public int getPuntosDeVida(){
-        return vida;
+        super(PESO_INICIAL,SONIDO);
     }
     
     public void vacunar(){
-        vida += 10;
+         variarPuntosDeVida(PUNTOS_DE_VIDA_GANADOS_POR_VACUNACION);
     }
 }

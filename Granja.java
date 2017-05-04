@@ -3,28 +3,22 @@
  * Write a description of interface Granja here.
  * 
  * @author Oscar Charro Rivera (oschariv)
- * @version 1.0
+ * @version 1.0 (Revision 04/05/2017)
  */
 
 public class Granja
 {
-    public void comer(Animal animal){
-        animal.comer();
-    }
-    
-    public void emitirSonidoCaracteristico(Animal animal){
-        animal.emitirSonidoCaracteristico();
-    }
-    
-    public int getPeso(Animal animal){
-        return animal.getPeso();
-    }
-    
-    public int getPuntosDeVida(Animal animal){
-        return animal.getPuntosDeVida();
+    public void alimentar(Animal animal){
+        if(animal.getPuntosDeVida()>0){
+            animal.comer();
+        }
     }
     
     public void vacunar(Vacunable animal){
         animal.vacunar();
+    }
+    
+    public void emitirSonidoCaracteristico(Animal animal){
+        animal.emitirSonidoCaracteristico();
     }
 }

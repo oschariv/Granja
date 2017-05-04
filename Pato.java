@@ -3,39 +3,19 @@
  * Write a description of class Pato here.
  * 
  * @author Oscar Charro Rivera (oschariv)
- * @version 1.0
+ * @version 1.0 (Revision 04/05/2017)
  */
-public class Pato extends Animal
+public class Pato extends Ave
 {
-    // instance variables - replace the example below with your own
-    private int peso;
     private static final int PESO_INICIAL = 2;
-    private int vida;
-    private static final int VIDA_INICIAL = 100;
+    private static final String SONIDO = "Cuak Cuak";
 
     /**
      * Constructor for objects of class Pato
      */
     public Pato()
     {
-        peso = PESO_INICIAL;
-        vida = VIDA_INICIAL;
+        super(PESO_INICIAL, SONIDO);
     }
 
-    public void comer(){
-        peso += 1;
-        vida -= 10;
-    }
-
-    public void emitirSonidoCaracteristico(){
-        System.out.println("Cua Cua");
-    }
-
-    public int getPeso(){
-        return peso;
-    }
-
-    public int getPuntosDeVida(){
-        return vida;
-    }
 }
